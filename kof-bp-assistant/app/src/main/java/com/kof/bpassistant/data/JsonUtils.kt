@@ -186,20 +186,26 @@ object JsonUtils {
     }
 
     /**
-     * 从 assets 复制初始数据文件到内部存储（首次安装时调用）。
-     * 若目标文件已存在则跳过，不覆盖用户已更新的数据。
+     * 从 assets 复制打包数据文件到内部存储。
+     * @param force 为 false 时仅在目标文件不存在时复制（首次安装）；
+     *              为 true 时无条件覆盖（升级安装、versionCode 变化时刷新写死数据）。
      */
-    fun copyAssetsToDataDir(context: Context, assetNames: List<String>, dataDir: File) {
+    fun copyAssetsToDataDir(
+        context: Context,
+        assetNames: List<String>,
+        dataDir: File,
+        force: Boolean = false
+    ) {
         assetNames.forEach { name ->
             val target = File(dataDir, name)
-            if (!target.exists()) {
+            if (force || !target.exists()) {
                 try {
                     context.assets.open("kof_data/$name").use { input ->
                         target.outputStream().use { out -> input.copyTo(out) }
                     }
-                    Log.i(TAG, "初始数据已复制: $name")
+                    Log.i(TAG, "打包数据已复制: $name（force=$force）")
                 } catch (e: Exception) {
-                    Log.w(TAG, "初始数据复制失败 [$name]: ${e.message}")
+                    Log.w(TAG, "打包数据复制失败 [$name]: ${e.message}")
                 }
             }
         }

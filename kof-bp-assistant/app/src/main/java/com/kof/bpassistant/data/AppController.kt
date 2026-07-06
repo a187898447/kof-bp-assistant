@@ -4,10 +4,16 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.util.Log
+import com.kof.bpassistant.BuildConfig
 
 /**
  * AppController: 启动时调用，协调版本检测→更新→进入主界面的流程。
  * 网络不可用时走离线分支，不阻断启动。
+ *
+ * 数据来源由 BuildConfig.SYNC_ENABLED 控制：
+ *  - false（无服务器阶段）：启动不联网，直接使用打包进 APK 的本地数据。
+ *    数据写死在 assets/kof_data，通过"改 JSON → 升 versionCode → 重新打包"生效。
+ *  - true（有服务器后）：启动检测版本并按需下载数据包热更新。
  */
 class AppController(private val context: Context) {
 
@@ -16,19 +22,38 @@ class AppController(private val context: Context) {
     private val repository: DataRepository
     private val prefs = context.getSharedPreferences("kof_prefs", Context.MODE_PRIVATE)
 
+    private companion object {
+        const val KEY_ASSET_VERSION = "asset_bundled_version"
+        val BUNDLED_FILES = listOf(
+            "heroes.json", "combos.json", "season_meta.json",
+            "counter_strategies.json", "layout_config.json", "hero_hashes.json"
+        )
+    }
+
     init {
         repository = DataRepository(context)
         syncManager = DataSyncManager(repository)
-        // 首次安装时，把 assets 中的初始数据复制到内部存储
-        JsonUtils.copyAssetsToDataDir(
-            context,
-            listOf(
-                "heroes.json", "combos.json", "season_meta.json",
-                "counter_strategies.json", "layout_config.json",
-                "hero_hashes.json"
-            ),
-            repository.dataDir
-        )
+        syncBundledAssets()
+    }
+
+    /**
+     * 把打包进 APK 的 assets 数据同步到内部存储。
+     *  - 首次安装：文件不存在，复制。
+     *  - 升级安装：versionCode 变化时，强制用新 assets 覆盖内部存储（force=true），
+     *    确保"改了 assets/kof_data 里的 JSON 再重新打包"能真正生效。
+     *
+     * 热更新开启（SYNC_ENABLED=true）后，内部存储可能已被下载的数据包覆盖成更新版本，
+     * 此时不应再用旧 assets 回退，因此仅在 versionCode 变化时覆盖一次。
+     */
+    private fun syncBundledAssets() {
+        val lastAssetVersion = prefs.getInt(KEY_ASSET_VERSION, -1)
+        val currentVersion = BuildConfig.VERSION_CODE
+        val force = lastAssetVersion != currentVersion
+        JsonUtils.copyAssetsToDataDir(context, BUNDLED_FILES, repository.dataDir, force)
+        if (force) {
+            prefs.edit().putInt(KEY_ASSET_VERSION, currentVersion).apply()
+            Log.i(tag, "已用打包数据刷新本地存储（versionCode $lastAssetVersion → $currentVersion）")
+        }
     }
 
     /**
@@ -51,6 +76,11 @@ class AppController(private val context: Context) {
      * **必须在后台线程调用**（网络 IO）。
      */
     fun checkStartup(): StartupResult {
+        // 无服务器阶段：不联网，直接用打包进 APK 的本地数据启动
+        if (!BuildConfig.SYNC_ENABLED) {
+            Log.i(tag, "数据同步未启用，使用本地打包数据启动")
+            return StartupResult.LocalData
+        }
         if (!isNetworkAvailable()) {
             Log.i(tag, "网络不可用，进入离线模式")
             return StartupResult.Offline
@@ -98,6 +128,7 @@ class AppController(private val context: Context) {
 sealed class StartupResult {
     object Ready : StartupResult()
     object Offline : StartupResult()
+    object LocalData : StartupResult()   // 无服务器阶段：使用打包进 APK 的本地数据，不联网
     data class ForceUpdate(val info: VersionCheckResponse) : StartupResult()
     data class SoftUpdate(val info: VersionCheckResponse) : StartupResult()
 }

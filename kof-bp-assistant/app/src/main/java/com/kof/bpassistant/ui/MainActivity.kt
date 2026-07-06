@@ -76,6 +76,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleStartupResult(result: StartupResult) {
         when (result) {
+            StartupResult.LocalData -> {
+                tvStatus.text = "已加载内置数据，可以开始使用"
+                showMainControls()
+            }
             StartupResult.Ready -> {
                 tvStatus.text = "数据已是最新，可以开始使用"
                 showMainControls()

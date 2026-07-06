@@ -16,7 +16,12 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        // 开发时指向 dev 服务器；改为 prod 地址后打 release 包
+        // 数据热更新总开关。
+        // false = 无服务器阶段：启动不联网，直接使用打包进 APK 的本地数据（assets/kof_data）。
+        // true  = 有服务器后：启动检测版本并按需下载数据包（需先填好下面的真实地址）。
+        buildConfigField "boolean", "SYNC_ENABLED", "false"
+
+        // 服务器地址（SYNC_ENABLED=true 时才生效）。有服务器后替换为真实地址。
         buildConfigField "String", "VERSION_CHECK_URL",
             '"https://dev.example.com/api/version/check"'
         buildConfigField "String", "DATA_DOWNLOAD_BASE_URL",
@@ -25,6 +30,7 @@ android {
 
     buildTypes {
         debug {
+            buildConfigField "boolean", "SYNC_ENABLED", "false"
             buildConfigField "String", "VERSION_CHECK_URL",
                 '"https://dev.example.com/api/version/check"'
             buildConfigField "String", "DATA_DOWNLOAD_BASE_URL",
@@ -33,7 +39,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            // 发布前替换为正式地址
+            // 有服务器后：把 SYNC_ENABLED 改为 true，并替换为正式地址
+            buildConfigField "boolean", "SYNC_ENABLED", "false"
             buildConfigField "String", "VERSION_CHECK_URL",
                 '"https://your-prod-server.com/api/version/check"'
             buildConfigField "String", "DATA_DOWNLOAD_BASE_URL",
