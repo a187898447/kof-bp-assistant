@@ -1,0 +1,28 @@
+# ---- 工具/环境配置（不入库）----
+.agents/
+.claude/
+
+# ---- Android / Gradle 构建产物 ----
+.gradle/
+build/
+*/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---- IDE ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# ---- 签名/密钥（安全）----
+*.jks
+*.keystore
+keystore.properties
+
+# ---- 日志/临时 ----
+*.log
+*.hprof

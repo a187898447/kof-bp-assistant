@@ -1,0 +1,32 @@
+[
+  {
+    "comboTag": "burst",
+    "threatPoints": [
+      "高爆发一秒删人，后排脆皮极危险",
+      "刺客快速突进，蹲人开团节奏快"
+    ],
+    "counterThought": "选前排护体 + 控制，限制刺客突进空间；保留净化/闪现应对点杀",
+    "recommendedTags": ["tank", "support", "crowd_control"],
+    "avoidTypes": ["marksman", "mage"]
+  },
+  {
+    "comboTag": "poke",
+    "threatPoints": [
+      "消耗型法术持续骚扰，团战前对方血量更满",
+      "远程压线，近战英雄难以靠近"
+    ],
+    "counterThought": "选机动性强的刺客或近战突进英雄，快速贴脸打断远程输出；开闪突破前排",
+    "recommendedTags": ["assassin", "diver", "high_mobility"],
+    "avoidTypes": ["marksman", "low_mobility_mage"]
+  },
+  {
+    "comboTag": "tank",
+    "threatPoints": [
+      "前排厚实，团战耗血长，难以推进",
+      "控制丰富，强开团能力"
+    ],
+    "counterThought": "选法师穿透或爆发型法师对抗坦克，搭配拆解控制的刺客；避免正面硬刚",
+    "recommendedTags": ["mage", "penetration", "assassin"],
+    "avoidTypes": ["warrior", "front_liner"]
+  }
+]

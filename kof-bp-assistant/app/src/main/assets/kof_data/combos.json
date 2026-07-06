@@ -1,0 +1,38 @@
+[
+  {
+    "id": "combo_burst_assassin",
+    "name": "刺客爆发套",
+    "tag": "burst",
+    "coreHeroes": ["li_bai", "diao_chan"],
+    "banTriggers": ["athena", "lian_po"],
+    "minHits": 1,
+    "pickWeight": 1.5,
+    "banWeight": 0.8,
+    "seasonWeight": 0.5,
+    "threshold": 1.5
+  },
+  {
+    "id": "combo_poke_mage",
+    "name": "法师消耗流",
+    "tag": "poke",
+    "coreHeroes": ["yase", "wang_zhao_jun"],
+    "banTriggers": ["diao_chan", "li_bai"],
+    "minHits": 1,
+    "pickWeight": 1.2,
+    "banWeight": 0.6,
+    "seasonWeight": 0.3,
+    "threshold": 1.2
+  },
+  {
+    "id": "combo_tank_front",
+    "name": "坦克前排压制",
+    "tag": "tank",
+    "coreHeroes": ["athena", "lian_po"],
+    "banTriggers": ["sun_wukong", "li_bai"],
+    "minHits": 2,
+    "pickWeight": 1.0,
+    "banWeight": 0.5,
+    "seasonWeight": 0.2,
+    "threshold": 1.8
+  }
+]

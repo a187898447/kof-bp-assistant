@@ -1,0 +1,72 @@
+[
+  {
+    "id": "luna",
+    "name": "露娜",
+    "role": "warrior",
+    "hardCounters": ["athena", "miyamoto"],
+    "softCounters": ["guan_yu", "sun_wukong"]
+  },
+  {
+    "id": "yase",
+    "name": "芈月",
+    "role": "mage",
+    "hardCounters": ["zhuangzhou", "cai_wenji"],
+    "softCounters": ["diao_chan", "wang_zhao_jun"]
+  },
+  {
+    "id": "li_bai",
+    "name": "李白",
+    "role": "assassin",
+    "hardCounters": ["athena", "lian_po"],
+    "softCounters": ["guan_yu", "bai_qi"]
+  },
+  {
+    "id": "hou_yi",
+    "name": "后羿",
+    "role": "marksman",
+    "hardCounters": ["li_bai", "sun_wukong"],
+    "softCounters": ["luna", "di_renjie"]
+  },
+  {
+    "id": "zhong_kui",
+    "name": "钟馗",
+    "role": "mage",
+    "hardCounters": ["daji", "zhen_ji"],
+    "softCounters": ["yase", "wang_zhao_jun"]
+  },
+  {
+    "id": "athena",
+    "name": "雅典娜",
+    "role": "tank",
+    "hardCounters": ["sun_wukong", "hou_yi"],
+    "softCounters": ["li_bai", "diao_chan"]
+  },
+  {
+    "id": "sun_wukong",
+    "name": "孙悟空",
+    "role": "warrior",
+    "hardCounters": ["athena", "bai_qi"],
+    "softCounters": ["guan_yu", "miyamoto"]
+  },
+  {
+    "id": "diao_chan",
+    "name": "貂蝉",
+    "role": "assassin",
+    "hardCounters": ["zhuangzhou", "cai_wenji"],
+    "softCounters": ["athena", "lian_po"]
+  },
+  {
+    "id": "wang_zhao_jun",
+    "name": "王昭君",
+    "role": "mage",
+    "hardCounters": ["diao_chan", "li_bai"],
+    "softCounters": ["luna", "sun_wukong"]
+  },
+  {
+    "id": "lian_po",
+    "name": "廉颇",
+    "role": "tank",
+    "hardCounters": ["sun_wukong", "hou_yi"],
+    "softCounters": ["li_bai", "diao_chan"]
+  }
+]

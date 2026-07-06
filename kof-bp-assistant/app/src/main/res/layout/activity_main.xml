@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/primary_dark">
+
+    <!-- 离线提示条 -->
+    <TextView
+        android:id="@+id/tvOfflineBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warning_bg"
+        android:padding="8dp"
+        android:text="@string/offline_banner"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KOF BP 助手"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BP 阶段实时克制建议"
+        android:textColor="#AAF0F0F0"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- 状态文字 -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在初始化…"
+        android:textColor="#CCFFFFFF"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 悬浮窗权限引导按钮（task 8.1） -->
+    <Button
+        android:id="@+id/btnGrantOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="① 授权悬浮窗权限"
+        android:textSize="15sp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
+    <!-- 启动悬浮窗按钮 -->
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/btn_start_service"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:enabled="false" />
+
+    <!-- 说明文字 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动后切换到游戏，悬浮窗将出现在屏幕上。\nBP 阶段点击「扫描」即可获取克制建议。\n进入对局后点击「进入游戏→」自动收起。"
+        android:textColor="#88FFFFFF"
+        android:textSize="12sp"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_marginTop="24dp"
+        android:gravity="center" />
+
+</LinearLayout>

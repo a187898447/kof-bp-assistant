@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 展开态：结果面板 + 扫描按钮 + 进入游戏按钮 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_float_expanded"
+    android:elevation="8dp"
+    android:padding="12dp">
+
+    <!-- 标题栏（用于拖动） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="KOF BP 助手"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMinimize"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:text="━"
+            android:textSize="12sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#CCFFFFFF"
+            android:padding="0dp" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#44FFFFFF"
+        android:layout_marginVertical="6dp" />
+
+    <!-- 结果文本区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击「扫描」获取 BP 建议"
+            android:textColor="#DDFFFFFF"
+            android:textSize="12sp"
+            android:lineSpacingMultiplier="1.4" />
+    </ScrollView>
+
+    <!-- 操作按钮区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="📷 扫描"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_btn_scan" />
+
+        <Button
+            android:id="@+id/btnEnterGame"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="进入游戏 →"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_btn_enter_game" />
+    </LinearLayout>
+
+</LinearLayout>
