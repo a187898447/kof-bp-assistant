@@ -3,6 +3,7 @@ package com.kof.bpassistant.service
 import android.app.*
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ServiceInfo
 import android.graphics.PixelFormat
 import android.os.Build
 import android.os.IBinder
@@ -10,6 +11,7 @@ import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.core.app.NotificationCompat
+import androidx.core.app.ServiceCompat
 import com.kof.bpassistant.R
 import com.kof.bpassistant.analysis.AnalysisResult
 import com.kof.bpassistant.analysis.CounterAnalysisEngine
@@ -65,7 +67,7 @@ class FloatingWindowService : Service() {
         windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
         createNotificationChannel()
-        startForeground(NOTIFICATION_ID, createNotification())
+        startAsForegroundService()
         Log.i(tag, "FloatingWindowService onCreate")
     }
 
@@ -73,22 +75,22 @@ class FloatingWindowService : Service() {
         // P1-3: intent 为 null 说明是系统重启 Service（无投影凭据），不继续初始化
         if (intent == null) {
             Log.w(tag, "系统重启 Service，无 MediaProjection 凭据，停止服务")
-            sendReauthNotification()
+            sendReauthNotification("服务被系统重启，需要重新授权截图")
             stopSelf()
             // P1-3: 返回 START_NOT_STICKY，不让系统自动重启此 Service
             return START_NOT_STICKY
         }
 
-        val resultCode = intent.getIntExtra(EXTRA_PROJECTION_RESULT_CODE, -1)
+        val resultCode = intent.getIntExtra(EXTRA_PROJECTION_RESULT_CODE, Activity.RESULT_CANCELED)
         val data: Intent? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
             intent.getParcelableExtra(EXTRA_PROJECTION_DATA, Intent::class.java)
         else
             @Suppress("DEPRECATION") intent.getParcelableExtra(EXTRA_PROJECTION_DATA)
 
         // P1-2 fix: Intent 非空但缺少有效凭据时，同样通知并停止服务
-        if (resultCode == -1 || data == null) {
+        if (resultCode != Activity.RESULT_OK || data == null) {
             Log.w(tag, "Intent 中无有效 MediaProjection 凭据（resultCode=$resultCode），停止服务")
-            sendReauthNotification()
+            sendReauthNotification("截图授权凭据无效，请重新授权")
             stopSelf()
             return START_NOT_STICKY
         }
@@ -97,7 +99,7 @@ class FloatingWindowService : Service() {
         // 不显示悬浮窗，通知用户重新授权并停止服务，避免出现"悬浮窗可见但扫描必失败"
         if (!captureManager.init(resultCode, data)) {
             Log.e(tag, "截图 session 初始化失败，停止服务并引导重新授权")
-            sendReauthNotification()
+            sendReauthNotification("截图初始化失败，请重新授权后再试")
             stopSelf()
             return START_NOT_STICKY
         }
@@ -296,7 +298,7 @@ class FloatingWindowService : Service() {
     // ---- 通知 ----
 
     /** 系统重启 Service 且无投影凭据时，通知用户重新授权 */
-    private fun sendReauthNotification() {
+    private fun sendReauthNotification(message: String) {
         val nm = getSystemService(NotificationManager::class.java) ?: return
         // P2-2 fix: 补 PendingIntent，点击通知回到 MainActivity 重新授权
         val activityIntent = Intent(this, com.kof.bpassistant.ui.MainActivity::class.java).apply {
@@ -308,13 +310,29 @@ class FloatingWindowService : Service() {
         )
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("BP 助手需要重新授权")
-            .setContentText("请点击重新启动并授权截图权限")
+            .setContentText(message)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(message))
             .setSmallIcon(android.R.drawable.ic_dialog_alert)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .build()
         nm.notify(NOTIFICATION_ID + 1, notification)
+    }
+
+    private fun startAsForegroundService() {
+        val notification = createNotification()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ServiceCompat.startForeground(
+                this,
+                NOTIFICATION_ID,
+                notification,
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION
+            )
+        } else {
+            @Suppress("DEPRECATION")
+            startForeground(NOTIFICATION_ID, notification)
+        }
     }
 
     private fun createNotificationChannel() {
