@@ -30,7 +30,7 @@
             android:layout_height="32dp"
             android:text="━"
             android:textSize="12sp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@android:color/transparent"
             android:textColor="#CCFFFFFF"
             android:padding="0dp" />
     </LinearLayout>

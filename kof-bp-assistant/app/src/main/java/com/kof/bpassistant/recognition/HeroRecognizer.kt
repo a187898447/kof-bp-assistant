@@ -23,8 +23,7 @@ class HeroRecognizer {
         const val EMPTY_SLOT = "__empty__"
         const val PHASH_SIZE = 32       // resize 目标边长
         const val DCT_SIZE = 8          // 取左上 8×8 均值区块
-        const val THRESHOLD_MATCH = 10  // 汉明距离 ≤ 10 视为匹配
-        const val THRESHOLD_EMPTY = 20  // 汉明距离全部 > 20 视为空槽位
+        const val THRESHOLD_MATCH = 10  // 汉明距离 ≤ 10 视为匹配；超过此值一律视为空槽位
     }
 
     // 当前哈希库：heroId → pHash(Long)
@@ -124,21 +123,12 @@ class HeroRecognizer {
             }
         }
 
-        // 三段式置信度（对齐 spec：<=10 确认命中，11..20 边界命中，>20 空槽）
-        return when {
-            minDist <= THRESHOLD_MATCH -> {
-                Log.d(tag, "确认命中: $bestId（dist=$minDist ≤ $THRESHOLD_MATCH）")
-                bestId
-            }
-            minDist <= THRESHOLD_EMPTY -> {
-                // 边界区域：取最近邻作为结果，但记录日志便于排查误判（spec: MVP 静默处理）
-                Log.w(tag, "边界命中: $bestId（dist=$minDist，介于 $THRESHOLD_MATCH~$THRESHOLD_EMPTY，置信度偏低）")
-                bestId
-            }
-            else -> {
-                Log.d(tag, "空槽位（minDist=$minDist > $THRESHOLD_EMPTY）")
-                EMPTY_SLOT
-            }
+        return if (minDist <= THRESHOLD_MATCH) {
+            Log.d(tag, "命中: $bestId（dist=$minDist）")
+            bestId
+        } else {
+            Log.d(tag, "未匹配（minDist=$minDist > $THRESHOLD_MATCH，视为空槽位）")
+            EMPTY_SLOT
         }
     }
 

@@ -1,72 +1,1705 @@
 [
   {
+    "id": "lianpo",
+    "name": "廉颇",
+    "role": "tank",
+    "hardCounters": [
+      "sunwukong",
+      "houyi"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "xiaoqiao",
+    "name": "小乔",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "luna",
+      "hanxin"
+    ]
+  },
+  {
+    "id": "zhaoyun",
+    "name": "赵云",
+    "role": "warrior",
+    "hardCounters": [
+      "lianpo",
+      "yadianna"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "mozi",
+    "name": "墨子",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "daji",
+    "name": "妲己",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "luna",
+      "hanxin"
+    ]
+  },
+  {
+    "id": "yingzheng",
+    "name": "嬴政",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "sunshangxiang",
+    "name": "孙尚香",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "lubanqihao",
+    "name": "鲁班七号",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "hanxin"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "zhuangzhou",
+    "name": "庄周",
+    "role": "support",
+    "hardCounters": [
+      "wangzhaojun",
+      "houyi"
+    ],
+    "softCounters": [
+      "libai",
+      "lanlingwang"
+    ]
+  },
+  {
+    "id": "liushan",
+    "name": "刘禅",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "gaojianli",
+    "name": "高渐离",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "ake",
+    "name": "阿轲",
+    "role": "assassin",
+    "hardCounters": [
+      "zhuangzhou",
+      "caiwenji"
+    ],
+    "softCounters": [
+      "yadianna",
+      "sunbin"
+    ]
+  },
+  {
+    "id": "zhongwuyan",
+    "name": "钟无艳",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "libai"
+    ]
+  },
+  {
+    "id": "sunbin",
+    "name": "孙膑",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "bianque",
+    "name": "扁鹊",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "sunwukong",
+    "name": "孙悟空",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "baiqi"
+    ],
+    "softCounters": [
+      "guanyu",
+      "gongbenwuzang"
+    ]
+  },
+  {
+    "id": "xinmoliuer",
+    "name": "心魔六耳",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "baiqi",
+    "name": "白起",
+    "role": "tank",
+    "hardCounters": [
+      "sunwukong",
+      "houyi"
+    ],
+    "softCounters": [
+      "miyue",
+      "zhugeliang"
+    ]
+  },
+  {
+    "id": "miyue",
+    "name": "芈月",
+    "role": "mage",
+    "hardCounters": [
+      "diaochan",
+      "libai"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "lvbu",
+    "name": "吕布",
+    "role": "warrior",
+    "hardCounters": [
+      "zhuangzhou",
+      "caiwenji"
+    ],
+    "softCounters": [
+      "sunbin",
+      "liubei"
+    ]
+  },
+  {
+    "id": "zhouyv",
+    "name": "周瑜",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "xiahoudun",
+    "name": "夏侯惇",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "libai",
+      "hanxin"
+    ]
+  },
+  {
+    "id": "zhenji",
+    "name": "甄姬",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "caocao",
+    "name": "曹操",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "dianwei",
+    "name": "典韦",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "libai"
+    ]
+  },
+  {
+    "id": "gongbenwuzang",
+    "name": "宫本武藏",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "libai",
+    "name": "李白",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "makeboluo",
+    "name": "马可波罗",
+    "role": "marksman",
+    "hardCounters": [
+      "hanxin",
+      "libai"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "direnjie",
+    "name": "狄仁杰",
+    "role": "marksman",
+    "hardCounters": [
+      "sunwukong",
+      "libai"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "damo",
+    "name": "达摩",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "xiangyu",
+    "name": "项羽",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "libai"
+    ]
+  },
+  {
+    "id": "wuzetian",
+    "name": "武则天",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "laofuzi",
+    "name": "老夫子",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "luna"
+    ]
+  },
+  {
+    "id": "guanyu",
+    "name": "关羽",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "lianpo",
+      "baiqi"
+    ]
+  },
+  {
+    "id": "diaochan",
+    "name": "貂蝉",
+    "role": "mage",
+    "hardCounters": [
+      "zhuangzhou",
+      "caiwenji"
+    ],
+    "softCounters": [
+      "yadianna",
+      "lianpo"
+    ]
+  },
+  {
+    "id": "anqila",
+    "name": "安琪拉",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "chengyaojin",
+    "name": "程咬金",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "houyi"
+    ]
+  },
+  {
     "id": "luna",
     "name": "露娜",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "gongbenwuzang"
+    ],
+    "softCounters": [
+      "guanyu",
+      "sunwukong"
+    ]
+  },
+  {
+    "id": "jiangziya",
+    "name": "姜子牙",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "liubang",
+    "name": "刘邦",
+    "role": "tank",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "hanxin",
+    "name": "韩信",
+    "role": "assassin",
+    "hardCounters": [
+      "lianpo",
+      "yadianna"
+    ],
+    "softCounters": [
+      "kai",
+      "baiqi"
+    ]
+  },
+  {
+    "id": "wangzhaojun",
+    "name": "王昭君",
+    "role": "mage",
+    "hardCounters": [
+      "diaochan",
+      "libai"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "lanlingwang",
+    "name": "兰陵王",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "sunbin"
+    ],
+    "softCounters": [
+      "zhuangzhou",
+      "baiqi"
+    ]
+  },
+  {
+    "id": "huamulan",
+    "name": "花木兰",
     "role": "warrior",
-    "hardCounters": ["athena", "miyamoto"],
-    "softCounters": ["guan_yu", "sun_wukong"]
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "zhangliang",
+    "name": "张良",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "buzhihuowu",
+    "name": "不知火舞",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "caiwenji"
+    ]
+  },
+  {
+    "id": "nakelulu",
+    "name": "娜可露露",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "zhangfei"
+    ],
+    "softCounters": [
+      "lianpo",
+      "kai"
+    ]
+  },
+  {
+    "id": "jvyoujing",
+    "name": "橘右京",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
   },
   {
     "id": "yase",
-    "name": "芈月",
-    "role": "mage",
-    "hardCounters": ["zhuangzhou", "cai_wenji"],
-    "softCounters": ["diao_chan", "wang_zhao_jun"]
+    "name": "亚瑟",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
   },
   {
-    "id": "li_bai",
-    "name": "李白",
-    "role": "assassin",
-    "hardCounters": ["athena", "lian_po"],
-    "softCounters": ["guan_yu", "bai_qi"]
+    "id": "niumo",
+    "name": "牛魔",
+    "role": "support",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "houyi"
+    ]
   },
   {
-    "id": "hou_yi",
+    "id": "houyi",
     "name": "后羿",
     "role": "marksman",
-    "hardCounters": ["li_bai", "sun_wukong"],
-    "softCounters": ["luna", "di_renjie"]
+    "hardCounters": [
+      "libai",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "direnjie"
+    ]
   },
   {
-    "id": "zhong_kui",
-    "name": "钟馗",
-    "role": "mage",
-    "hardCounters": ["daji", "zhen_ji"],
-    "softCounters": ["yase", "wang_zhao_jun"]
-  },
-  {
-    "id": "athena",
-    "name": "雅典娜",
-    "role": "tank",
-    "hardCounters": ["sun_wukong", "hou_yi"],
-    "softCounters": ["li_bai", "diao_chan"]
-  },
-  {
-    "id": "sun_wukong",
-    "name": "孙悟空",
+    "id": "liubei",
+    "name": "刘备",
     "role": "warrior",
-    "hardCounters": ["athena", "bai_qi"],
-    "softCounters": ["guan_yu", "miyamoto"]
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
   },
   {
-    "id": "diao_chan",
-    "name": "貂蝉",
-    "role": "assassin",
-    "hardCounters": ["zhuangzhou", "cai_wenji"],
-    "softCounters": ["athena", "lian_po"]
-  },
-  {
-    "id": "wang_zhao_jun",
-    "name": "王昭君",
-    "role": "mage",
-    "hardCounters": ["diao_chan", "li_bai"],
-    "softCounters": ["luna", "sun_wukong"]
-  },
-  {
-    "id": "lian_po",
-    "name": "廉颇",
+    "id": "zhangfei",
+    "name": "张飞",
     "role": "tank",
-    "hardCounters": ["sun_wukong", "hou_yi"],
-    "softCounters": ["li_bai", "diao_chan"]
+    "hardCounters": [
+      "miyue",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "zhugeliang",
+      "houyi"
+    ]
+  },
+  {
+    "id": "liyuanfang",
+    "name": "李元芳",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "lanlingwang",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuji",
+    "name": "虞姬",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "zhongkui",
+    "name": "钟馗",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yangjian",
+    "name": "杨戬",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "yadianna",
+    "name": "雅典娜",
+    "role": "warrior",
+    "hardCounters": [
+      "sunwukong",
+      "houyi"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "caiwenji",
+    "name": "蔡文姬",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "taiyizhenren",
+    "name": "太乙真人",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "nezha",
+    "name": "哪吒",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "zhugeliang",
+    "name": "诸葛亮",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "huangzhong",
+    "name": "黄忠",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "daqiao",
+    "name": "大乔",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "donghuangtaiyi",
+    "name": "东皇太一",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "ganjiangmoye",
+    "name": "干将莫邪",
+    "role": "mage",
+    "hardCounters": [
+      "lanlingwang",
+      "libai"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "guiguzi",
+    "name": "鬼谷子",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "kai",
+    "name": "铠",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "houyi",
+      "zhugeliang"
+    ]
+  },
+  {
+    "id": "bailishouyue",
+    "name": "百里守约",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "bailixuance",
+    "name": "百里玄策",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "sulie",
+    "name": "苏烈",
+    "role": "support",
+    "hardCounters": [
+      "sunwukong",
+      "miyue"
+    ],
+    "softCounters": [
+      "houyi",
+      "zhugeliang"
+    ]
+  },
+  {
+    "id": "mengqi",
+    "name": "梦奇",
+    "role": "tank",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "nvwa",
+    "name": "女娲",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "mingshiyin",
+    "name": "明世隐",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "gongsunli",
+    "name": "公孙离",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "yangyuhuan",
+    "name": "杨玉环",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "peiqinhu",
+    "name": "裴擒虎",
+    "role": "assassin",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "yixing",
+    "name": "弈星",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "kuangtie",
+    "name": "狂铁",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "milaidi",
+    "name": "米莱狄",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuange",
+    "name": "元歌",
+    "role": "assassin",
+    "hardCounters": [
+      "lianpo",
+      "yadianna"
+    ],
+    "softCounters": [
+      "baiqi",
+      "caiwenji"
+    ]
+  },
+  {
+    "id": "sunce",
+    "name": "孙策",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "simayi",
+    "name": "司马懿",
+    "role": "assassin",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "dunshan",
+    "name": "盾山",
+    "role": "support",
+    "hardCounters": [
+      "sunwukong",
+      "miyue"
+    ],
+    "softCounters": [
+      "houyi",
+      "zhugeliang"
+    ]
+  },
+  {
+    "id": "jialuo",
+    "name": "伽罗",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "shenmengxi",
+    "name": "沈梦溪",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "lixin",
+    "name": "李信",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "shangguanwaner",
+    "name": "上官婉儿",
+    "role": "mage",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "change",
+    "name": "嫦娥",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "zhubajie",
+    "name": "猪八戒",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "libai"
+    ],
+    "softCounters": [
+      "zhugeliang",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "pangu",
+    "name": "盘古",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "libai"
+    ],
+    "softCounters": [
+      "zhugeliang",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "yao",
+    "name": "瑶",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yunzhongjun",
+    "name": "云中君",
+    "role": "assassin",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "dongfangyao",
+    "name": "曜",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "sunwukong"
+    ]
+  },
+  {
+    "id": "machao",
+    "name": "马超",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "xishi",
+    "name": "西施",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "lubandashi",
+    "name": "鲁班大师",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "mengya",
+    "name": "蒙犽",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "jing",
+    "name": "镜",
+    "role": "assassin",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "mengtian",
+    "name": "蒙恬",
+    "role": "tank",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "libai"
+    ]
+  },
+  {
+    "id": "aguduo",
+    "name": "阿古朵",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "xialuote",
+    "name": "夏洛特",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "lan",
+    "name": "澜",
+    "role": "assassin",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "chengyaojin"
+    ]
+  },
+  {
+    "id": "sikongzhen",
+    "name": "司空震",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "sunwukong",
+      "houyi"
+    ]
+  },
+  {
+    "id": "ailin",
+    "name": "艾琳",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yunying",
+    "name": "云缨",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "jinchan",
+    "name": "金蝉",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "fei",
+    "name": "暃",
+    "role": "assassin",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "sangqi",
+    "name": "桑启",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "geya",
+    "name": "戈娅",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "haiyue",
+    "name": "海月",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "zhaohuaizhen",
+    "name": "赵怀真",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "laixiao",
+    "name": "莱西奥",
+    "role": "marksman",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "jixiaoman",
+    "name": "姬小满",
+    "role": "warrior",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yalian",
+    "name": "亚连",
+    "role": "warrior",
+    "hardCounters": [
+      "miyue",
+      "zhugeliang"
+    ],
+    "softCounters": [
+      "libai",
+      "diaochan"
+    ]
+  },
+  {
+    "id": "duoliya",
+    "name": "朵莉亚",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "hainuo",
+    "name": "海诺",
+    "role": "warrior",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "aoyin",
+    "name": "敖隐",
+    "role": "marksman",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "dasiming",
+    "name": "大司命",
+    "role": "warrior",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuanliuzhizi_magic",
+    "name": "元流之子(法师)",
+    "role": "mage",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuanliuzhizi_tank",
+    "name": "元流之子(坦克)",
+    "role": "tank",
+    "hardCounters": [
+      "sunwukong",
+      "miyue"
+    ],
+    "softCounters": [
+      "houyi",
+      "zhugeliang"
+    ]
+  },
+  {
+    "id": "shaosiyuan",
+    "name": "少司缘",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "ying",
+    "name": "影",
+    "role": "warrior",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "sunbin"
+    ]
+  },
+  {
+    "id": "cang",
+    "name": "苍",
+    "role": "marksman",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
+  },
+  {
+    "id": "kongkonger",
+    "name": "空空儿",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuanliuzhizi_archer",
+    "name": "元流之子(射手)",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "sunquan",
+    "name": "孙权",
+    "role": "marksman",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "chicha",
+    "name": "蚩奼",
+    "role": "warrior",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "yuanliuzhizi_support",
+    "name": "元流之子(辅助)",
+    "role": "support",
+    "hardCounters": [
+      "libai",
+      "lanlingwang"
+    ],
+    "softCounters": [
+      "hanxin",
+      "luna"
+    ]
+  },
+  {
+    "id": "dayu",
+    "name": "大禹",
+    "role": "support",
+    "hardCounters": [
+      "miyue",
+      "sunwukong"
+    ],
+    "softCounters": [
+      "zhugeliang",
+      "houyi"
+    ]
+  },
+  {
+    "id": "yuanliuzhizi_assassin",
+    "name": "元流之子(刺客)",
+    "role": "support",
+    "hardCounters": [
+      "yadianna",
+      "lianpo"
+    ],
+    "softCounters": [
+      "baiqi",
+      "kai"
+    ]
   }
 ]

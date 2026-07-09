@@ -1,18 +1,18 @@
 {
   "season": "S37",
   "version": "1.0.0",
-  "strongHeroes": ["yase", "li_bai", "hou_yi"],
+  "strongHeroes": ["miyue", "libai", "houyi"],
   "strongComboTags": ["burst", "poke"],
   "tierList": {
-    "yase": 1,
-    "li_bai": 1,
-    "hou_yi": 1,
+    "miyue": 1,
+    "libai": 1,
+    "houyi": 1,
     "luna": 2,
-    "sun_wukong": 2,
-    "athena": 2,
-    "wang_zhao_jun": 2,
-    "diao_chan": 3,
-    "lian_po": 3,
-    "zhong_kui": 3
+    "sunwukong": 2,
+    "yadianna": 2,
+    "wangzhaojun": 2,
+    "diaochan": 3,
+    "lianpo": 3,
+    "zhongkui": 3
   }
 }
